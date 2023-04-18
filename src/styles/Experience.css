@@ -1,0 +1,20 @@
+.experience-wrapper{
+    min-height:100vh;
+    width:100%;
+    background:var(--white-bg);
+}
+.list-wrapper ul{
+    text-align: left;
+    padding:0.8rem;
+}
+.list-wrapper .position{
+    font-weight: 800;
+}
+.list-wrapper .organisation{
+    margin:0.8rem 0;
+    font-style: oblique;
+}
+
+#dark .experience-wrapper{
+    background: var(--dark-theme);
+}

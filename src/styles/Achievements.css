@@ -1,0 +1,42 @@
+.achievements-wrapper{
+    min-height:100vh;
+    width:100%;
+    background:transparent;
+}
+.list-wrapper ul{
+    text-align: left;
+}
+.list-wrapper{
+    height:100%;
+    width:30rem;
+    margin:2rem auto;
+    font-size: 1.4rem;
+    opacity: 0;
+    transform: translateX(-200px);
+}
+.list-wrapper.show{
+    transition: all 900ms;
+    transform: translateX(0);
+    opacity: 1;
+}
+.list-wrapper li{
+    margin:1.5rem 0;
+    color:var(--bigtitles);
+}
+#dark .list-wrapper li{
+    color:var(--helio-gray);
+}
+
+@media screen and(max-width:700px) {
+    .list-wrapper{
+        width:28rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:500px){
+    .list-wrapper{
+        width:18rem;
+        font-size: 1.2rem;
+    }
+}

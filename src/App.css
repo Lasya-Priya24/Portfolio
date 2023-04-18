@@ -1,0 +1,154 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+/* reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navbar-bg:#efecf388;
+    --bigtitles: #131212;
+    --violet: #6019b1;
+    --light-violet:#9845cf;
+    --light-green: #9CE37D;
+    --green:#1ec51e;
+    --asparagus: #87B37A;
+    --xanadu: #77867F;
+    --dark-theme-vio:#9c44d7;
+    --helio-gray: #B4AAC5;
+    --white-bg:#f0ebeb;
+    --golden: #e6990a;
+    --pink:#fd4592;
+    --body-bg: #dddddd;
+    --dark-theme: #1f1d1f;
+    --red:#ca1a1a;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+a,
+button {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    width:100rem;
+    background: var(--body-bg);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* default styling for the headings */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+/* For the App div  */
+.App {
+    text-align: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: black;
+    position: absolute;
+    z-index: -200;
+}
+
+#light {
+    background: var(--body-bg);
+}
+
+#dark {
+    background: var(--dark-theme);
+}
+
+.underline {
+    height: 5px;
+    width: 10rem;
+    border-radius: 1rem;
+    margin: 0.2rem auto;
+    background: #339ab9af;
+}
+
+/* highlighting headings */
+.heading-highlight{
+    color:var(--violet);
+}
+
+/* highlighting headings dark theme */
+#dark .heading-highlight{
+    color:var(--dark-theme-vio);
+}
+
+/* heading styles */
+.component-headings{
+    font-size: 2.8rem;
+    padding: 1rem;
+    transform:translateX(30%) scale(0.6);
+    opacity:0;
+}
+.component-headings.show{
+    transition:all 800ms;
+    transform: translateX(0) scale(1);
+    opacity:1;
+}
+/* heading styles for light theme */
+.component-headings{
+    color:var(--bigtitles);
+}
+/* heading styles for dark theme */
+#dark .component-headings{
+    color:var(--helio-gray);
+
+}
+/* background for components in dark mode*/
+#dark .form-container, 
+#dark .project-wrapper,
+#dark .skills-wrapper,
+#dark .about-wrapper,
+#dark .stack,
+#dark .achievements-wrapper,
+#dark .testimonials-wrapper{
+    background: var(--dark-theme);
+}
+@media screen and (max-width:800px){
+    .underline{
+        height:4px;
+    }
+    .component-headings{
+        font-size: 2.4rem;
+    }
+}
+@media screen and (max-width:500px){
+    .underline{
+        height:3px;
+    }
+
+    .component-headings{
+        font-size: 2rem;
+        /* text-shadow: 1px 1px 2px grey; */
+    }
+
+    #dark .component-headings{
+        /* text-shadow: 1px 1px 2px white; */
+    }
+}   
+
+.about-wrapper .show{
+    transform:translateX(0);
+}
